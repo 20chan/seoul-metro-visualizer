@@ -1,0 +1,36 @@
+@import url('https://cdn.0ch.me/fonts/iosevka/iosevka-ss04.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-red: 224 108 117;
+    --color-green: 152 195 121;
+    --color-yellow: 229 192 123;
+    --color-blue: 97 175 239;
+    --color-purple: 198 120 221;
+    --color-cyan: 86 182 194;
+    --color-white: 248 248 242;
+    --color-black: 40 44 52;
+
+    --color-primary: var(--color-red);
+    --color-secondary: var(--color-green);
+    --color-background: var(--color-black);
+    --color-text: var(--color-white);
+  }
+}
+
+* {
+  scrollbar-color: rgb(var(--color-white) / 0.2) var(--color-background);
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--color-white) / 0.2);
+}
