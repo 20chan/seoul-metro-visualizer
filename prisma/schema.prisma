@@ -14,6 +14,6 @@ model Station {
   id Int @id @default(autoincrement())
   name String
   line String
-  x Decimal
-  y Decimal
+  x String
+  y String
 }

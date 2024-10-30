@@ -6,16 +6,18 @@ export async function load() {
 
   const data = await fetchMetro(date);
 
-  const filtered = data.CardSubwayStatsNew.row.filter(x => x.SBWY_ROUT_LN_NM === '2호선');
+  const filtered = data.CardSubwayStatsNew.row;
 
-  const result = await Promise.all(filtered.map(async x => {
+  const result = [];
+  for (const x of filtered) {
     const coord = await getAddress(x.SBWY_STNS_NM, x.SBWY_ROUT_LN_NM);
-    return {
+    result.push({
       subwayLine: x.SBWY_ROUT_LN_NM,
       station: x.SBWY_STNS_NM,
       coord,
-    };
-  }));
+    });
+  }
+
 
   return { result };
 }
