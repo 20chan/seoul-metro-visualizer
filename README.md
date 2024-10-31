@@ -1,38 +1,13 @@
-# sv
+# [seoul-metro-visualizer](https://metro.0ch.me)
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+![Seoul Metro Visualizer](/preview/main.png)
+![Seoul Metro Visualizer](/preview/filtered.png)
 
-## Creating a project
+시간대별 지하철 혼잡도, 타는 인원과 내리는 인원 등을 시각화하기 위함
 
-If you're seeing this, you've probably already done this step. Congrats!
+지금은 svelte 적응기라 대충 인원수 합을 보여주는 정도, 실제 혼잡도와는 거리가 먼 상태
 
-```bash
-# create a new project in the current directory
-npx sv create
 
-# create a new project in my-app
-npx sv create my-app
-```
+## references
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- [서울시 지하철 호선별 역별 시간대별 승하차 인원 정보](https://data.seoul.go.kr/dataList/OA-12252/S/1/datasetView.do)
