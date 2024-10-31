@@ -1,4 +1,12 @@
 @import url('https://cdn.0ch.me/fonts/iosevka/iosevka-ss04.css');
+@import url('https://cdn.0ch.me/fonts/gmarket/stylesheet.css');
+
+@font-face {
+  font-family: 'KORAIL';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KORAIL.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;

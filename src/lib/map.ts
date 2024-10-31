@@ -43,8 +43,8 @@ export async function getAddress(place: string, line: string): Promise<{ x: stri
 
     if (!find) {
       console.log(`[getAddress] ${originalPlace} ${line} not found, query: ${query}`);
+      return null;
     }
-    return null;
   }
 
   await prisma.station.create({

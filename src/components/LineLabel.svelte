@@ -7,9 +7,26 @@
     display: inline-block;
     background-color: var(--color, #fff);
     border-radius: 0.5rem;
+    font-family: 'KORAIL';
+  }
+
+  .line-label:hover, .line-label.disabled {
+    background-color: color-mix(in srgb, var(--color, #fff) 40%, transparent)
+  }
+
+  .line-label.disabled:hover {
+    background-color: var(--color, #fff);
   }
 </style>
 
-<div class="line-label">
+<script lang="ts">
+  import { createEventDispatcher } from 'svelte';
+
+  const dispatch = createEventDispatcher();
+
+  export let disabled: boolean = false;
+</script>
+
+<button class={`line-label ${disabled ? 'disabled' : ''}`} on:click={() => dispatch('click')}>
   <slot />
-</div>
+</button>

@@ -4,6 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        marketsans: 'GmarketSans',
+        korail: 'KORAIL',
         mono: 'Iosevka SS04 Web',
       },
       colors: {
